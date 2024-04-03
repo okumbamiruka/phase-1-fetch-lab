@@ -1,6 +1,12 @@
 function fetchBooks() {
-  // To pass the tests, don't forget to return your fetch!
-  
+  //To pass the tests, don't forget to return your fetch!
+  fetch('https://anapioficeandfire.com/api/books')
+    .then(response => response.json())
+    .then(function(books) {
+      return renderBooks(books)
+    });
+
+    
 }
 
 function renderBooks(books) {
